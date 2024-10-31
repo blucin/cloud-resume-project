@@ -1,0 +1,31 @@
+# A starter template for the terraform.tfvars file
+# This file should be used to store sensitive or secret information
+# and should not be checked into version control
+
+# AWS region
+aws_region = "valid_aws_region"
+
+# AWS profile
+# I am using sso to authenticate to aws, so I need to specify a profile
+# You can delete this variable if you are not using sso and remove it from the aws provider block in main.tf `profile = var.aws_profile`
+aws_profile = "your_aws_profile"
+
+# Frontend Static Site Folder
+# Should only contain static files
+# Note: Everything in this folder will be public
+site_folder = "your_site_folder"
+
+# Frontend Static Site Index and Error File
+site_index_file = "index.html"
+site_error_file = "error.html"
+
+# Domain Name
+site_domain = "example.com"
+
+# Cloudflare API Token
+# Recommended Permissions: Zone.Page Rules, Zone.DNS
+cloudflare_api_token = "your_cloudflare_api_token"
+
+# Cloudflare Zone ID
+# Get this from the Cloudflare dashboard from the overview section of your domain
+cloudflare_zone_id = "your_cloudflare_zone_id"
