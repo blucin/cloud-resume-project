@@ -6,7 +6,7 @@ terraform {
     }
     cloudflare = {
       source  = "cloudflare/cloudflare"
-      version = "4.44.0"
+      version = "4.45.0"
     }
   }
 }
@@ -23,7 +23,7 @@ provider "cloudflare" {
 module "static_files" {
   source   = "hashicorp/dir/template"
   version  = "1.0.2"
-  base_dir = var.site_folder
+  base_dir = "${path.root}/${var.site_folder}"
 }
 
 # S3 bucket for the root domain site and www subdomain

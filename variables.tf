@@ -37,3 +37,8 @@ variable "cloudflare_zone_id" {
   type = string
   description = "The zone id for the domain in cloudflare"
 }
+
+variable "cors_allowed_origin" {
+    description = "The allowed origin for the CORS policy"
+    type        = set(string)
+}

@@ -10,3 +10,16 @@ module "website" {
   cloudflare_api_token = var.cloudflare_api_token
   cloudflare_zone_id   = var.cloudflare_zone_id
 }
+
+module "function" {
+  source = "./modules/function"
+
+  aws_region          = var.aws_region
+  aws_profile         = var.aws_profile
+  cors_allowed_origin = var.cors_allowed_origin
+}
+
+output "api-endpoint" {
+  value       = module.function.api_endpoint
+  description = "The Public HTTP API endpoint"
+}
