@@ -37,7 +37,7 @@ cd modules/function
 pnpm install && pnpm build
 ```
 
-1. Comment out the website module in the root `main.tf` and run terraform to deploy the lambda function, api gateway and dynamodb table.
+5. Comment out the website module in the root `main.tf` and run terraform to deploy the lambda function, api gateway and dynamodb table.
 
 ```bash
 terraform init
